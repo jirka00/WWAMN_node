@@ -1,0 +1,3 @@
+[submodule "components/ESP-IDF_SX1280Lib/ESP-IDF_SX1280Lib"]
+	path = components/ESP-IDF_SX1280Lib/ESP-IDF_SX1280Lib
+	url = git@github.com:jirka00/ESP-IDF_SX1280Lib.git
