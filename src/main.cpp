@@ -294,7 +294,7 @@ extern "C" void app_main()
 
     ESP_ERROR_CHECK(esp_pm_configure(&pm_config));
     RadioStatus_t RadStatus;
-    SX1280Hal Radio(handle, GPIO_NUM_25, GPIO_NUM_26, GPIO_NUM_NC, GPIO_NUM_NC, GPIO_NUM_27, &callbacks);
+    SX1280Hal Radio(handle, GPIO_NUM_21, GPIO_NUM_26, GPIO_NUM_16, GPIO_NUM_17, GPIO_NUM_22, &callbacks);
 
     Radio.Init();
     vTaskDelay(1500 / portTICK_RATE_MS);
@@ -304,7 +304,7 @@ extern "C" void app_main()
     for (int i = 0; i < 15; i++)
     {
         vTaskDelay(100 / portTICK_RATE_MS);
-        //if(i==10){ Radio.SetFs();}
+        if(i==10){ Radio.SetFs();}
         RadStatus = Radio.GetStatus();
         printf("status Value: %x \n", RadStatus.Value);
     }
