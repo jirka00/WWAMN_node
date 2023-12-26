@@ -49,8 +49,6 @@ esp_pm_config_esp32_t pm_config = {
 #define DELAY_MS 1000
 #define MPU9250_WHO_AM_I_REG_ADDR 0x1C
 
-#define BUSYIO GPIO_NUM_25
-#define RESETIO GPIO_NUM_27
 
 max1730x BMS(I2C_NUM_0);
 
